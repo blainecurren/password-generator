@@ -51,3 +51,26 @@ function determineUppercase(){
       return uppercaseCheck;
   }
   
+//Function used to include numbers in password
+function determineNumbers(){
+    numberCheck = prompt("Do you want to include numbers in your password? \n(Yes or No)");
+      numberCheck = numberCheck.toLowerCase();
+  
+      if (numberCheck === null || numberCheck === ""){
+        alert("Please answer Yes or No");
+        determineNumbers();
+  
+      }else if (numberCheck === "yes" || numberCheck ==="y"){
+        numberCheck = true;
+        return numberCheck;
+  
+      }else if (numberCheck === "no" || numberCheck ==="n"){
+        numberCheck = false;
+        return numberCheck;
+      
+      }else {
+        alert("Please answer Yes or No");
+        determineNumbers();
+      }
+      return numberCheck;
+  }
