@@ -1,7 +1,9 @@
 # Javascript Password Generator
-[Generate Password]
+
+[Generate Password](https://blainecurren.github.io/password-generator/)
 
 ## Purpose
+
 Password generator capable of generator random password with or without: uppercase, lowercase letters, symbols, and numbers.
 
 ```
@@ -27,7 +29,9 @@ The following image demonstrates the application functionality:
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
 ## Built With
+
 HTML/CSS/Javascript
 
 ## Contributions made by
+
 Blaine Curren
