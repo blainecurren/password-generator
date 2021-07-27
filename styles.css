@@ -17,11 +17,6 @@ body {
   background-color: #f9fbfd;
 }
 
-.number-input {
-  width: 3rem;
-  align-items: center;
-}
-
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -91,10 +86,6 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
-}
-
-.btn:hover {
-  background-color: red;
 }
 
 button[disabled] {
