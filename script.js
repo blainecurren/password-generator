@@ -23,6 +23,10 @@ function determineLength() {
   } else if (isNaN(passwordLength)) {
     alert("Password length must be a number between 8-128 characters");
     determineLength();
+  } else {
+    alert(
+      "The next three screens will ask you what types of characters you would like to be included in your password.\nIf you choose 'No' for all, your password will only contain lowercase letters."
+    );
   }
   return passwordLength;
 }
@@ -99,13 +103,13 @@ function determineSpecial() {
 // Generate Password Function
 function generatePassword() {
   determineLength();
-  //   console.log(passwordLength);
-  //   determineUppercase();
-  //   console.log(uppercaseCheck);
-  //   determineNumbers();
-  //   console.log(numberCheck);
-  //   determineSpecial();
-  //   console.log(specialCheck);
+  console.log(passwordLength);
+  determineUppercase();
+  console.log(uppercaseCheck);
+  determineNumbers();
+  console.log(numberCheck);
+  determineSpecial();
+  console.log(specialCheck);
 
   var characters = lowercaseChar;
   var password = "";
@@ -137,15 +141,16 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password1 = "";
-  password1 = generatePassword();
+  var password = "";
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password1;
+
+  passwordText.value = password;
 }
 
-// function resetText(){
-//   document.getElementById("password").value = "Your Secure Password";
-// }
+function resetText() {
+  document.getElementById("password").value = "Your Secure Password";
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
