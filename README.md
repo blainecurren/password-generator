@@ -34,4 +34,4 @@ HTML/CSS/Javascript
 
 ## Contributions made by
 
-Blaine Curren
+[Blaine Curren](https://github.com/blainecurren)
