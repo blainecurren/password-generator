@@ -99,13 +99,13 @@ function determineSpecial() {
 // Generate Password Function
 function generatePassword() {
   determineLength();
-//   console.log(passwordLength);
-//   determineUppercase();
-//   console.log(uppercaseCheck);
-//   determineNumbers();
-//   console.log(numberCheck);
-//   determineSpecial();
-//   console.log(specialCheck);
+  //   console.log(passwordLength);
+  //   determineUppercase();
+  //   console.log(uppercaseCheck);
+  //   determineNumbers();
+  //   console.log(numberCheck);
+  //   determineSpecial();
+  //   console.log(specialCheck);
 
   var characters = lowercaseChar;
   var password = "";
@@ -134,3 +134,18 @@ function generatePassword() {
   }
   return password;
 }
+
+// Write password to the #password input
+function writePassword() {
+  var password1 = "";
+  password1 = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password1;
+}
+
+// function resetText(){
+//   document.getElementById("password").value = "Your Secure Password";
+// }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
