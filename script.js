@@ -109,6 +109,7 @@ function generatePassword() {
 
   var characters = lowercaseChar;
   var password = "";
+  // Try to refactor this to use less else if's
   if (uppercasePrompt && numberPrompt && specialPrompt) {
     characters += uppercaseChar + numberChar + specialChar;
   } else if (uppercasePrompt && numberPrompt) {
