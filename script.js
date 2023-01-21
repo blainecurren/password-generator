@@ -1,7 +1,9 @@
 // Assignment code here
-var capitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var lowerLetter = "abcdefghijklmnopqrstuvwxyz"
-var specialChars = "!"#$%&'()*+,-./:;<=>?@[/]^_`{|}~]"
+var capitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
+var specialChars = "!#$%&'()*+,-./:;<=>?@[/]^_`{|}~]";
+var numbers = "0123456789";
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
