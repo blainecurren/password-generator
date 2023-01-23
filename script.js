@@ -6,7 +6,7 @@ var numbers = "0123456789";
 var passwordLengthPrompt;
 var uppercasePrompt;
 var numberPrompt;
-var specialPrompt
+var specialPrompt;
 
 function getLength() {
   passwordLengthPrompt = window.prompt(
@@ -29,6 +29,8 @@ function generateUppercase() {
     "Would you like to include uppercase characters in your password?"
   );
 
+  uppercasePrompt = uppercasePrompt.toLowerCase();
+
   if (uppercase === null || uppercase === "") {
     alert("Please answer Yes or No.");
   } else if (uppercase === "yes" || uppercase === "y") {
@@ -38,6 +40,25 @@ function generateUppercase() {
     uppercasePrompt = false;
     return uppercasePrompt;
   }
+}
+
+function generateNumbers() {
+  numberPrompt = prompt("Would you like numbers in your password?");
+  numberPrompt = numberPrompt.toLowerCase();
+
+  if (numberPrompt === null || numberPrompt === "") {
+    alert("Please answer Yes or No");
+    generateNumbers();
+  } else if (numberPrompt === "yes" || numberPrompt === "y") {
+    numberPrompt = true;
+    return numberPrompt;
+  } else if (numberPrompt === "no" || numberPrompt === "n") {
+    numberPrompt = false;
+  } else {
+    alert("Please answer Yes or No");
+    generateNumbers();
+  }
+  return numberPrompt;
 }
 
 function generatePassword() {}
