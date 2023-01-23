@@ -3,6 +3,10 @@ var capitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 var specialChars = "!#$%&'()*+,-./:;<=>?@[/]^_`{|}~]";
 var numbers = "0123456789";
+var passwordLengthPrompt;
+var uppercasePrompt;
+var numberPrompt;
+var specialPrompt
 
 function getLength() {
   passwordLengthPrompt = window.prompt(
@@ -17,7 +21,26 @@ function getLength() {
   } else if (isNaN(passwordLengthPrompt)) {
     alert("Password length must be a number.");
   }
+  return passwordLengthPrompt;
 }
+
+function generateUppercase() {
+  uppercasePrompt = window.prompt(
+    "Would you like to include uppercase characters in your password?"
+  );
+
+  if (uppercase === null || uppercase === "") {
+    alert("Please answer Yes or No.");
+  } else if (uppercase === "yes" || uppercase === "y") {
+    uppercasePrompt = true;
+    return uppercasePrompt;
+  } else if (uppercase === "no" || uppercase === "n") {
+    uppercasePrompt = false;
+    return uppercasePrompt;
+  }
+}
+
+function generatePassword() {}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
