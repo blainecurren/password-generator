@@ -43,7 +43,7 @@ function generateUppercase() {
 }
 
 function generateNumbers() {
-  numberPrompt = prompt("Would you like numbers in your password?");
+  numberPrompt = window.prompt("Would you like numbers in your password?");
   numberPrompt = numberPrompt.toLowerCase();
 
   if (numberPrompt === null || numberPrompt === "") {
@@ -61,7 +61,54 @@ function generateNumbers() {
   return numberPrompt;
 }
 
-function generatePassword() {}
+function generateSpecialChars() {
+  specialPrompt = window.prompt(
+    "Would you like special characters in your password?"
+  );
+  specialPrompt = specialPrompt.toLowerCase();
+
+  if (specialPrompt === null || specialPrompt === "") {
+    alert("Please answer yes or no");
+  } else if (specialPrompt === "Yes" || specialPrompt === "Y") {
+    specialPrompt = true;
+    return specialPrompt;
+  } else if (specialPrompt === "No" || specialPrompt === "N") {
+    specialPrompt = false;
+    return specialPrompt;
+  } else {
+    alert("Please answer yes or no");
+    generateSpecialChars();
+  }
+  return specialPrompt;
+}
+
+function generatePassword() {
+  getLength();
+  generateUppercase();
+  generateNumbers();
+  generateSpecialChars;
+
+  var characters = lowercaseChar;
+  var password = "";
+
+  if (uppercasePrompt && numberPrompt && specialPrompt) {
+    characters += uppercaseChar + numberChar + specialChars;
+  } else if (uppercasePrompt && numberChar + specialChars) {
+    characters += uppercaseChar + numberChar;
+  } else if (numberPrompt && specialPrompt) {
+    characters += numberChar + specialChars;
+  } else if (uppercasePrompt && specialPrompt) {
+    characters += uppercaseChar + specialChars;
+  } else if (uppercasePrompt) {
+    characters += numberChar;
+  } else if (numberPrompt) {
+    characters += numberChar;
+  } else if (specialPrompt) {
+    characters += specialChars;
+  } else {
+    characters === lowercaseChar;
+  }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
