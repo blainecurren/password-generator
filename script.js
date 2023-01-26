@@ -108,6 +108,13 @@ function generatePassword() {
   } else {
     characters === lowercaseChar;
   }
+
+  for (var i = 0; i < passwordLengthPrompt; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return password;
 }
 
 // Get references to the #generate element
